@@ -77,4 +77,18 @@ public class RecursionTests {
 		assertEquals(rec.somaIncrAlt(4, 4), 8, "4 + 4 == 8");
 	}
 
+	@Test
+	public void testSomaSerie1() {
+		assertEquals(rec.somaSerie(1), 1.0, " para 1");
+	}
+	
+	@Test
+	public void testSomaSerie2() {
+		assertEquals(rec.somaSerie(2), 1.5, " para 3");
+	}
+
+	@Test
+	public void testSomaSerie3() {
+		assertEquals(rec.somaSerie(3), 1.83, " para 3");
+	}
 }

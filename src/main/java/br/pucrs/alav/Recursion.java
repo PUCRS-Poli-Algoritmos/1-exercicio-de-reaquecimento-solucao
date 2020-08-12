@@ -4,6 +4,9 @@ public class Recursion {
 	public static void main(String[] args) {
 		Recursion rec = new Recursion();
 		System.out.println(rec.multNat(6, 4));
+
+		for (int i = 1; i <=5; i++)
+			System.out.println("n = " + i + "   serie = " + rec.somaSerie(i));
 	}
 
 	public long multNat(long vezes, long nro) {
@@ -29,7 +32,7 @@ public class Recursion {
 		else 
 			return(somaIncr(n1 - 1, n2 - 1) + 1 + 1);
 	}
-	
+
 	public long somaIncrAlt(long n1, long n2) {
 		if ((n1 < 0) || (n2 < 0))
 			throw new IllegalArgumentException();
@@ -43,4 +46,12 @@ public class Recursion {
 			return(somaIncr(n1, n2 - 1) + 1);
 	}
 
+	public double somaSerie(long n) {
+		if (n < 0)
+			throw new IllegalArgumentException();
+		else if (n ==1)
+			return(1);
+		else 
+			return(somaSerie(n-1) + ((double)(1/n)));
+	}
 }
