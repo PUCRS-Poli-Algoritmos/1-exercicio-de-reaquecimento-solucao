@@ -79,16 +79,16 @@ public class RecursionTests {
 
 	@Test
 	public void testSomaSerie1() {
-		assertEquals(rec.somaSerie(1), 1.0, " para 1");
+		assertEquals(1.0, rec.somaSerie(1), " para 1");
 	}
 	
 	@Test
 	public void testSomaSerie2() {
-		assertEquals(rec.somaSerie(2), 1.5, " para 3");
+		assertEquals(1.5, rec.somaSerie(2), " para 3");
 	}
 
 	@Test
 	public void testSomaSerie3() {
-		assertEquals(rec.somaSerie(3), 1.83, " para 3");
+		assertEquals(1.83, rec.somaSerie(3), " para 3");
 	}
 }
