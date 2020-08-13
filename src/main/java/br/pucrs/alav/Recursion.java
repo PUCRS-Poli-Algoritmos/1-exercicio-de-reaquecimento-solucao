@@ -31,6 +31,7 @@ public class Recursion {
 		System.out.println("m = 3, n = 1   --> " + rec.ackerman(3, 1));
 		System.out.println("m = 3, n = 2   --> " + rec.ackerman(3, 2));
 		System.out.println("m = 2, n = 3   --> " + rec.ackerman(2, 3));
+		
 	}
 
 	public long multNat(long vezes, long nro) {
