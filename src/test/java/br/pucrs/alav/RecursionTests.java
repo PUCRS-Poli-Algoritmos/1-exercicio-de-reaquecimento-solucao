@@ -131,4 +131,89 @@ public class RecursionTests {
 	public void testreverseStr6() {
 		assertEquals("", rec.reverseStr(""));
 	}	
+	
+	@Test
+	public void testFFunction1() {
+		assertEquals(1, rec.fFunction(1));
+	}	
+	
+	@Test
+	public void testFFunction2() {
+		assertEquals(2, rec.fFunction(2));
+	}
+	
+	@Test
+	public void testFFunction3() {
+		assertEquals(7, rec.fFunction(3));
+	}	
+	
+	@Test
+	public void testFFunction4() {
+		assertEquals(20, rec.fFunction(4));
+	}	
+	
+	@Test
+	public void testFFunction5() {
+		assertEquals(61, rec.fFunction(5));
+	}	
+	
+	@Test
+	public void testAckermarn1() {
+		assertEquals(1, rec.ackerman(0, 0));
+	}	
+
+	@Test
+	public void testAckermarn2() {
+		assertEquals(2, rec.ackerman(0, 1));
+	}	
+
+	@Test
+	public void testAckermarn3() {
+		assertEquals(2, rec.ackerman(1, 0));
+	}	
+
+	@Test
+	public void testAckermarn4() {
+		assertEquals(3, rec.ackerman(0, 2));
+	}	
+
+	@Test
+	public void testAckermarn5() {
+		assertEquals(3, rec.ackerman(2, 0));
+	}
+	
+	@Test
+	public void testAckermarn6() {
+		assertEquals(3, rec.ackerman(1, 1));
+	}	
+
+	@Test
+	public void testAckermarn7() {
+		assertEquals(4, rec.ackerman(1, 2));
+	}	
+
+	@Test
+	public void testAckermarn8() {
+		assertEquals(5, rec.ackerman(1, 3));
+	}	
+	
+	@Test
+	public void testAckermarn9() {
+		assertEquals(5, rec.ackerman(2, 1));
+	}	
+	
+	@Test
+	public void testAckermarn10() {
+		assertEquals(13, rec.ackerman(3, 1));
+	}	
+	
+	@Test
+	public void testAckermarn11() {
+		assertEquals(29, rec.ackerman(3, 2));
+	}	
+	
+	@Test
+	public void testAckermarn12() {
+		assertEquals(9, rec.ackerman(2, 3));
+	}	
 }
