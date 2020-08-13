@@ -7,6 +7,12 @@ public class Recursion {
 
 		for (int i = 1; i <=5; i++)
 			System.out.println("n = " + i + "   serie = " + rec.somaSerie(i));
+		
+		System.out.println("Casa -> " + rec.reverseStr("Casa"));
+		System.out.println("Orgânico -> " + rec.reverseStr("Orgânico"));
+		System.out.println("Paralelo -> " + rec.reverseStr("Paralelo"));
+		System.out.println(" -> " + rec.reverseStr(""));
+		System.out.println("Arara -> " + rec.reverseStr("Arara"));
 	}
 
 	public long multNat(long vezes, long nro) {
@@ -52,6 +58,15 @@ public class Recursion {
 		else if (n ==1)
 			return(1);
 		else 
-			return(somaSerie(n-1) + ((double)(1/n)));
+			return(somaSerie(n-1) + 1/((double)n));
+	}
+	
+	public String reverseStr(String str) {
+		StringBuilder res = new StringBuilder(str.length());
+		
+		for(int i = str.length()-1; i >= 0; i--)
+			res.append(str.charAt(i));
+		
+		return res.toString();
 	}
 }

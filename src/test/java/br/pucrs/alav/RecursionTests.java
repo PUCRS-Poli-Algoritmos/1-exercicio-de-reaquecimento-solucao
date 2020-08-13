@@ -19,76 +19,111 @@ public class RecursionTests {
 	
 	@Test
 	public void testMultNat1() {
-		assertEquals(rec.multNat(6, 4), 24, "6 * 4 == 24");
+		assertEquals(24, rec.multNat(6, 4), "6 * 4 == 24");
 	}
 	
 	@Test
 	public void testMultNat2() {
-		assertEquals(rec.multNat(4, 6), 24, "4 * 6 == 24");
+		assertEquals(24, rec.multNat(4, 6), "4 * 6 == 24");
 	}
 	
 	@Test
 	public void testMultNat3() {
-		assertEquals(rec.multNat(1, 5), 05, "1 * 5 == 5");
+		assertEquals(05, rec.multNat(1, 5), "1 * 5 == 5");
 	}
 	
 	@Test
 	public void testMultNat4() {
-		assertEquals(rec.multNat(5, 5), 25, "5 * 5 == 25");
+		assertEquals(25, rec.multNat(5, 5), "5 * 5 == 25");
 	}
 	
 	@Test
 	public void testMultNat5() {
-		assertEquals(rec.multNat(0, 5), 0, "0 * 5 == 0");
+		assertEquals(0, rec.multNat(0, 5), "0 * 5 == 0");
 	}
 	
 	@Test
 	public void testMultNat6() {
-		assertEquals(rec.multNat(5, 0), 0, "0 * 5 == 0");
+		assertEquals(0, rec.multNat(5, 0), "0 * 5 == 0");
 	}
 
 	@Test
 	public void testSomaIncr1() {
-		assertEquals(rec.somaIncr(4, 2), 6, "4 + 2 == 6");
+		assertEquals(6, rec.somaIncr(4, 2), "4 + 2 == 6");
 	}
 	
 	@Test
 	public void testSomaIncr2() {
-		assertEquals(rec.somaIncr(2, 4), 6, "2 + 4 == 6");
+		assertEquals(6, rec.somaIncr(2, 4), "2 + 4 == 6");
 	}
 
 	@Test
 	public void testSomaIncr3() {
-		assertEquals(rec.somaIncr(4, 4), 8, "4 + 4 == 8");
+		assertEquals(8, rec.somaIncr(4, 4), "4 + 4 == 8");
 	}
 
 	@Test
 	public void testSomaIncrAlt1() {
-		assertEquals(rec.somaIncrAlt(4, 2), 6, "4 + 2 == 6");
+		assertEquals(6, rec.somaIncrAlt(4, 2), "4 + 2 == 6");
 	}
 	
 	@Test
 	public void testSomaIncrAlt2() {
-		assertEquals(rec.somaIncrAlt(2, 4), 6, "2 + 4 == 6");
+		assertEquals(6, rec.somaIncrAlt(2, 4), "2 + 4 == 6");
 	}
 
 	@Test
 	public void testSomaIncrAlt3() {
-		assertEquals(rec.somaIncrAlt(4, 4), 8, "4 + 4 == 8");
+		assertEquals(8, rec.somaIncrAlt(4, 4), "4 + 4 == 8");
 	}
 
 	@Test
 	public void testSomaSerie1() {
-		assertEquals(1.0, rec.somaSerie(1), " para 1");
+		assertEquals(1.0, rec.somaSerie(1), 0.00001, " para n = 1");
 	}
 	
 	@Test
 	public void testSomaSerie2() {
-		assertEquals(1.5, rec.somaSerie(2), " para 3");
+		assertEquals(1.5, rec.somaSerie(2), 0.00001, " para n = 2");
 	}
 
 	@Test
 	public void testSomaSerie3() {
-		assertEquals(1.83, rec.somaSerie(3), " para 3");
+		assertEquals(1.833333, rec.somaSerie(3), 0.00001, " para n = 3");
 	}
+	
+	@Test
+	public void testSomaSerie4() {
+		assertEquals(2.083333, rec.somaSerie(4), 0.00001, " para n = 4");
+	}
+	
+	@Test
+	public void testSomaSerie5() {
+		assertEquals(2.283333, rec.somaSerie(5), 0.00001, " para n = 5");
+	}
+
+	@Test
+	public void testreverseStr1() {
+		assertEquals("asaC", rec.reverseStr("Casa"));
+	}
+	
+	@Test
+	public void testreverseStr2() {
+		assertEquals("ocinâgrO", rec.reverseStr("Orgânico"));
+	}
+	
+	@Test
+	public void testreverseStr3() {
+		assertEquals("olelaraP", rec.reverseStr("Paralelo"));
+	}	
+	
+	@Test
+	public void testreverseStr4() {
+		assertEquals("ararA", rec.reverseStr("Arara"));
+	}	
+	
+	@Test
+	public void testreverseStr5() {
+		assertEquals("", rec.reverseStr(""));
+	}	
 }
