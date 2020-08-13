@@ -124,6 +124,6 @@ public class RecursionTests {
 	
 	@Test
 	public void testreverseStr5() {
-		assertEquals("", rec.reverseStr(""));
+		assertEquals("", rec.reverseStr("a"));
 	}	
 }
