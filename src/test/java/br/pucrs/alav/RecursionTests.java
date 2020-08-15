@@ -216,4 +216,48 @@ public class RecursionTests {
 	public void testAckermarn12() {
 		assertEquals(9, rec.ackerman(2, 3));
 	} 	
+	
+	@Test
+	public void testVetSlice1() {
+		int [] vetRes = {3, 4, 5};
+		int [] vet = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		assertArrayEquals(vetRes, rec.vetSlice(vet, 2, 5));
+	}
+	
+	@Test
+	public void testVetSlice2() {
+		int [] vetRes = {7};
+		int [] vet = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		assertArrayEquals(vetRes, rec.vetSlice(vet, 6, 7));
+	}
+	
+	@Test
+	public void testVetSlice3() {
+		int [] vetRes = {};
+		int [] vet = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		assertArrayEquals(vetRes, rec.vetSlice(vet, 6, 6));
+	}
+	
+	@Test
+	public void testSomaVet1() {
+		int [] vet = {1,2,3,4,5,6,7,8,9,10};
+		assertEquals(55, rec.somaVet1(vet));
+	}
+
+	@Test
+	public void testSomaVet2() {
+		int [] vet = new int[10];
+
+		vet[0] = 10;
+		vet[1] = 10;
+		vet[2] = 10;
+		vet[3] = 10;
+		vet[4] = 10;
+		vet[5] = 10;
+		vet[6] = 10;
+		vet[7] = 10;
+		vet[8] = 10;
+		vet[9] = 10;
+		assertEquals(100, rec.somaVet1(vet));
+	}
 }

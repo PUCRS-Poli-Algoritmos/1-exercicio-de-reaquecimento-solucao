@@ -17,7 +17,7 @@ public class Recursion {
 		System.out.println("");
 		for (int i = 1; i <=5; i++)
 			System.out.println("n = " + i + "   fFunction = " + rec.fFunction(i));
-		
+
 		System.out.println("");
 		System.out.println("m = 0, n = 0   --> " + rec.ackerman(0, 0));
 		System.out.println("m = 0, n = 1   --> " + rec.ackerman(0, 1));
@@ -31,7 +31,20 @@ public class Recursion {
 		System.out.println("m = 3, n = 1   --> " + rec.ackerman(3, 1));
 		System.out.println("m = 3, n = 2   --> " + rec.ackerman(3, 2));
 		System.out.println("m = 2, n = 3   --> " + rec.ackerman(2, 3));
-		
+
+		int [] vet = {1,2,3,4,5,6,7,8,9,10};
+		System.out.println("\nSoma de {1,2,3,4,5,6,7,8,9,10} = " + rec.somaVet1(vet));
+		vet[0] = 10;
+		vet[1] = 10;
+		vet[2] = 10;
+		vet[3] = 10;
+		vet[4] = 10;
+		vet[5] = 10;
+		vet[6] = 10;
+		vet[7] = 10;
+		vet[8] = 10;
+		vet[9] = 10;
+		System.out.println("Soma de {10, 10, 10, 10, 10, 10, 10, 10, 10, 10} = " + rec.somaVet1(vet));
 	}
 
 	public long multNat(long vezes, long nro) {
@@ -105,6 +118,35 @@ public class Recursion {
 			return ackerman(m-1, 1);
 		else /**if ((m != 0) && (n != 0))  **/
 			return ackerman(m-1, ackerman(m, n-1));
+	}
+
+	public long somaVet1(int[] vet) {
+		return somaVet1(vet, 0);
+	}
+
+	private long somaVet1(int [] vet, int pos) {
+		if ((pos < 0) || (pos >= vet.length) || (vet == null))
+			throw new IllegalArgumentException("Nro negativo!");
+		else if (vet.length == 0)
+			return 0;
+		else if (pos == vet.length - 1)
+			return vet[pos];
+		else return vet[pos] + somaVet1(vet, pos + 1);
+	}
+
+	public long somaVet2(int[] vet) {
+		if (vet.length == 0)
+			return 0;
+		else 
+			return vet[0] + somaVet2(vetSlice(vet, 1, vet.length));
+	}
+	
+	public int [] vetSlice(int[] vet, int ini, int fim) {
+		int [] res = new int[fim - ini];
+		
+		System.arraycopy(vet, ini, res, 0, fim - ini);
+		
+		return res;
 	}
 }
 
