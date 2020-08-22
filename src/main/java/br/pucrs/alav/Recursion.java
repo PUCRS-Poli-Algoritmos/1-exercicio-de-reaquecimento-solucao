@@ -1,6 +1,7 @@
 package br.pucrs.alav;
 
 public class Recursion {
+	
 	public static void main(String[] args) {
 		Recursion rec = new Recursion();
 		System.out.println(rec.multNat(6, 4));
