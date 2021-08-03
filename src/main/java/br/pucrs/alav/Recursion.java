@@ -4,7 +4,8 @@ public class Recursion {
 	
 	public static void main(String[] args) {
 		Recursion rec = new Recursion();
-		System.out.println(rec.multNat(6, 4));
+		
+		System.out.println("6 * 4 = " + rec.multNat(6, 4));
 
 		for (int i = 1; i <=5; i++)
 			System.out.println("n = " + i + "   serie = " + rec.somaSerie(i));
