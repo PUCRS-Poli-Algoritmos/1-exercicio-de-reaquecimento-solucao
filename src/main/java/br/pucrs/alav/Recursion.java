@@ -7,6 +7,10 @@ public class Recursion {
 		
 		System.out.println("6 * 4 = " + rec.multNat(6, 4));
 
+		System.out.println("6 + 4 = " + rec.somaIncr(6, 4));
+		System.out.println("6 + 4 = " + rec.somaIncrAlt(6, 4));
+		System.out.println("6 + 4 = " + rec.somaIncrAlt2(6, 4));
+		
 		for (int i = 1; i <=5; i++)
 			System.out.println("n = " + i + "   serie = " + rec.somaSerie(i));
 
@@ -97,6 +101,17 @@ public class Recursion {
 			return(somaIncr(n1 - 1, n2) + 1);
 		else 
 			return(somaIncr(n1, n2 - 1) + 1);
+	}
+	
+	public long somaIncrAlt2(long n1, long n2) {
+		if ((n1 < 0) || (n2 < 0))
+			throw new IllegalArgumentException();
+		else if (n1 > 0)
+			return(somaIncrAlt2(n1 - 1, n2) + 1);
+		else if (n2 > 0)
+			return(somaIncrAlt2(n1, n2 - 1) + 1);
+		else 
+			return(0);
 	}
 
 	public double somaSerie(long n) {
