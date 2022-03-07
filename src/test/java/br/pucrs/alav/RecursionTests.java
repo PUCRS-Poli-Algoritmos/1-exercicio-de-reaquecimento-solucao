@@ -2,7 +2,7 @@ package br.pucrs.alav;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.Before;
+
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -109,7 +109,7 @@ public class RecursionTests {
 	
 	@Test
 	public void testreverseStr2() {
-		assertEquals("ocinâgrO", rec.reverseStr("Orgânico"));
+		assertEquals("ocinï¿½grO", rec.reverseStr("Orgï¿½nico"));
 	}
 	
 	@Test
