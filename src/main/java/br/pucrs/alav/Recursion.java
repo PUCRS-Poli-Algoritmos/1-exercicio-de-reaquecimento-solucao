@@ -15,7 +15,7 @@ public class Recursion {
 			System.out.println("n = " + i + "   serie = " + rec.somaSerie(i));
 
 		System.out.println("\nCasa -> " + rec.reverseStr("Casa"));
-		System.out.println("Orgânico -> " + rec.reverseStr("Orgânico"));
+		System.out.println("Orgï¿½nico -> " + rec.reverseStr("Orgï¿½nico"));
 		System.out.println("Paralelo -> " + rec.reverseStr("Paralelo"));
 		System.out.println(" -> " + rec.reverseStr(""));
 		System.out.println("Arara -> " + rec.reverseStr("Arara"));
@@ -37,6 +37,8 @@ public class Recursion {
 		System.out.println("m = 3, n = 1   --> " + rec.ackerman(3, 1));
 		System.out.println("m = 3, n = 2   --> " + rec.ackerman(3, 2));
 		System.out.println("m = 2, n = 3   --> " + rec.ackerman(2, 3));
+		System.out.println("m = 4, n = 1   --> " + rec.ackerman(4, 1));
+		System.out.println("m = 4, n = 2   --> " + rec.ackerman(4, 2));
 
 		int [] vet = {1,2,3,4,5,6,7,8,9,10};
 		System.out.println("\nSoma de {1,2,3,4,5,6,7,8,9,10} = " + rec.somaVet1(vet));
@@ -68,7 +70,7 @@ public class Recursion {
 
 	public long multNat(long vezes, long nro) {
 		if (vezes < 0)
-			throw new IllegalArgumentException("Número negativo");
+			throw new IllegalArgumentException("Nï¿½mero negativo");
 		else if (vezes == 0)
 			return 0;
 		else if (vezes == 1)
